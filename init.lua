@@ -70,6 +70,12 @@ local objects = {
 				{"pipes_turn2","Pipes Turn 2","myores_slate","pipes_turn2",pipesturn2_box},
 				{"pipes","Pipes","myores_slate","pipes",pipes_box},
 				{"pipes_corner","Pipes Corner","myores_slate","pipes_corner",pipes_box},
+				{"large_pipe_turn","Large Pipe Turn","myores_slate","large_pipe_turn",pipeturn_box},
+				{"large_pipe_turn2","Large Pipe Turn 2","myores_slate","large_pipe_turn2",pipeturn2_box},
+				{"large_pipe_elbow","Large Pipe Elbow","myores_slate","large_pipe_elbow",pipeturn2_box},
+				{"large_pipe","Large Pipe","myores_slate","large_pipe",pipe_box},
+				{"large_pipe_x","Large Pipe X","myores_slate","large_pipe_x",pipex_box},
+				{"large_pipe_t","Large Pipe T","myores_slate","large_pipe_t",pipet_box},
 				}
 
 for i in ipairs (objects) do
@@ -83,7 +89,7 @@ minetest.register_node("mypipes:"..nam,{
 	description = des,
 	tiles = {img..".png"},
 	drawtype = "mesh",
-	mesh = obj..".obj",
+	mesh = "mypipes_" ..obj..".obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {  cracky=1, crumbly = 1, not_in_creative_inventory=0},
